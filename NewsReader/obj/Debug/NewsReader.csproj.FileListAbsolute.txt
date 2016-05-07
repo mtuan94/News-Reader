@@ -1,0 +1,129 @@
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\App.xbf
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\MainPage.xbf
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\ReadingPage.xbf
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.xr.xml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.exe
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.pdb
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\resources.pri
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\AppxManifest.xml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.build.appxrecipe
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Extensions.dll
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Primitives.dll
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Extensions.xml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Primitives.xml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\App.g.i.cs
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\App.g.cs
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.g.i.cs
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.g.cs
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.g.i.cs
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.g.cs
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\XamlTypeInfo.g.cs
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\App.xaml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\App.xbf
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\XamlSaveStateFile.xml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.xaml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.xaml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.xbf
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.xbf
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.exe
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.pdb
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.csproj.GenerateResource.Cache
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\priconfig.xml
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\priconfig.xml.intermediate
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\layout.resfiles
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\layout.resfiles.intermediate
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\resources.resfiles
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\resources.resfiles.intermediate
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\pri.resfiles
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\pri.resfiles.intermediate
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\qualifiers.txt
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\qualifiers.txt.intermediate
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\ProjectArchitectures.txt
+D:\OneDrive\STUDY\code project\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.csprojResolveAssemblyReference.cache
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\App.xbf
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\MainPage.xbf
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\ReadingPage.xbf
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.xr.xml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.exe
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.pdb
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\resources.pri
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\AppxManifest.xml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.build.appxrecipe
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Extensions.dll
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Primitives.dll
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Extensions.xml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Primitives.xml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.csprojResolveAssemblyReference.cache
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\App.g.i.cs
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\App.g.cs
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.g.i.cs
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.g.cs
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.g.i.cs
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.g.cs
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\XamlTypeInfo.g.cs
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\App.xaml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.xaml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.xaml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\App.xbf
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.xbf
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.xbf
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\XamlSaveStateFile.xml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.exe
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.pdb
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.csproj.GenerateResource.Cache
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\priconfig.xml
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\priconfig.xml.intermediate
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\layout.resfiles
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\layout.resfiles.intermediate
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\resources.resfiles
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\resources.resfiles.intermediate
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\pri.resfiles
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\pri.resfiles.intermediate
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\qualifiers.txt
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\qualifiers.txt.intermediate
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\OneDrive\STUDY\CODE_PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ProjectArchitectures.txt
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\App.xbf
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\MainPage.xbf
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\ReadingPage.xbf
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.xr.xml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.exe
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.pdb
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\resources.pri
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\AppxManifest.xml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\NewsReader.build.appxrecipe
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Extensions.dll
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Primitives.dll
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Extensions.xml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\System.Net.Http.Primitives.xml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.csprojResolveAssemblyReference.cache
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\App.g.i.cs
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\App.g.cs
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.g.i.cs
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.g.cs
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.g.i.cs
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.g.cs
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\XamlTypeInfo.g.cs
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\App.xaml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.xaml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.xaml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\App.xbf
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MainPage.xbf
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ReadingPage.xbf
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\XamlSaveStateFile.xml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.exe
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.pdb
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\NewsReader.csproj.GenerateResource.Cache
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\priconfig.xml
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\priconfig.xml.intermediate
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\layout.resfiles
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\layout.resfiles.intermediate
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\resources.resfiles
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\resources.resfiles.intermediate
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\pri.resfiles
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\pri.resfiles.intermediate
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\qualifiers.txt
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\qualifiers.txt.intermediate
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\obj\Debug\ProjectArchitectures.txt
