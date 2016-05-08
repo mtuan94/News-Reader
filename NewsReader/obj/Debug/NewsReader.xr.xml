@@ -90,7 +90,7 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
-      <RootEvent Name="LoadCompleted" />
+      <RootEvent Name="NavigationCompleted" />
     </RootType>
     <RootType FullName="NewsReader.ReadingPage" />
   </Roots.RootTypes>

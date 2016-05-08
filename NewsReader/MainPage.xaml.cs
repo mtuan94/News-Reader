@@ -177,7 +177,7 @@ namespace NewsReader
                 {
                     //có kết nối mạng
                     //check xem file cache đã cũ chưa
-                    if ((DateTime.Now - properties.DateModified).TotalMinutes > 5 )
+                    if ((DateTime.Now - properties.DateModified).TotalMinutes > 5 || string.IsNullOrEmpty(strRSS))
                     {
                         //đã cũ, load file mới
                         strRSS = await httpClient.GetStringAsync(CattegoryModel.links);
@@ -187,43 +187,16 @@ namespace NewsReader
                 else
                 {
                     //không có kết nối mạng
-                    //kiem tra co file cahe
-                    if (string.IsNullOrEmpty(strRSS))
-                    {
-                        //thong bao va thoat
-                        var msg = new MessageDialog("Không có kết nối mạng, không có dữ liệu cũ, ứng dụng sẽ thoát").ShowAsync();
+                    //thong bao va thoat
+                        var msg = new MessageDialog("Không có kết nối mạng, ứng dụng sẽ thoát");
+                        await msg.ShowAsync();
                         Application.Current.Exit();
-                    }
-                    else
-                    {
-                        //thong bao load file cache cu
-                        if (!acceptOldData)
-                        {
-                            bool isAccept = false;
-                            var msg = new MessageDialog("Không thể kết nối đến máy chủ, sử dụng dữ liệu cũ ?", "Opp!");
-                            msg.Commands.Add(new UICommand("Chấp nhận", command => { isAccept = true; }));
-                            msg.Commands.Add(new UICommand("Hủy bỏ", command => { isAccept = false; }));    //hủy bỏ -> thoát
-                            msg.Options = MessageDialogOptions.AcceptUserInputAfterDelay;
-                            await msg.ShowAsync();
-                            if (!isAccept)
-                            {
-                                Application.Current.Exit();
-                            }
-                            else
-                            {
-                                acceptOldData = true;
-                            }
-                        }
-                        
-                    }
 
                 }
-                
-
-
                 //chuyen chuoi strRSS sang dinh danh file xml
 
                 var DocXML = XDocument.Parse(strRSS);
+
                 try
                 {
                     //Descendants: lấy file xml, đọc các "item", gom các item vào 1 list

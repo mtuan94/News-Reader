@@ -28,7 +28,7 @@
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="0,10,0,0">
-            <WebView x:ConnectionId='1' x:Name="WebView"                                      />
+            <WebView x:ConnectionId='1' x:Name="WebView"                                                  />
         </Grid>
     </Grid>
 </Page>

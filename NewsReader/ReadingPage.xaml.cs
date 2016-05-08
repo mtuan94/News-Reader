@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -122,5 +123,11 @@ namespace NewsReader
         {
 
         }
+
+        private void WebView_NavigationCompleted(WebView sender, WebViewNavigationCompletedEventArgs args)
+        {
+            NewsTitle.Text = sender.DocumentTitle;
+        }
+
     }
 }
