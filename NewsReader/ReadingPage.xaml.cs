@@ -67,9 +67,12 @@ namespace NewsReader
         /// session.  The state will be null the first time a page is visited.</param>
         private void NavigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            //Khởi chạy khi form này được gọi
+            //LoadStateEventArgs đối tượng được truyền vào 
             var newsItem = e.NavigationParameter as NewsItem;
             if (newsItem != null)
             {
+                //set source for webviews
                 WebView.Source = new Uri(newsItem.Link);
                 NewsTitle.Text = newsItem.Title;
             }

@@ -8,6 +8,8 @@ namespace NewsReader
 {
     public class NewsItem
     {
+        //Đối tượng để hiển thị từng item trong news list
+
         public string Title { get; set; }
 
         public string Description { set; get; }
