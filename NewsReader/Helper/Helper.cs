@@ -9,6 +9,7 @@ using Windows.Security.Cryptography.Core;
 using Windows.Storage;
 using Windows.Storage.Streams;
 using System.IO;
+using Windows.Networking.Connectivity;
 namespace NewsReader
 {
     class Helper
@@ -37,10 +38,14 @@ namespace NewsReader
         {
             try
             {
+                //chuyển data sang byte thì mới ghi ra file được 
                 var data = Encoding.UTF8.GetBytes(content);
 
+                //using: các biến khai báo trong using chỉ tồn tại trong ngoac dưới, sau đó biến sẽ được giải phóng
                 using(var wt = await file.OpenStreamForWriteAsync())
                 {
+                    //Mở Stream để ghi file
+                    //ghi từ byte số 0 đến byte cuối cùng
                     await wt.WriteAsync(data, 0, data.Length);
                 }
                 return true;
@@ -70,9 +75,17 @@ namespace NewsReader
             }
             catch (Exception ex)
             {
-
+                Debug.WriteLine("Error: " + ex.Message);
             }
             return "";
+        }
+
+
+
+        public static bool IsConnectedToInternet()
+        {
+            ConnectionProfile connectionProfile = NetworkInformation.GetInternetConnectionProfile();
+            return (connectionProfile != null && connectionProfile.GetNetworkConnectivityLevel() == NetworkConnectivityLevel.InternetAccess);
         }
     }
 }

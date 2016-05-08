@@ -10,6 +10,7 @@ using System.Xml.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -52,24 +53,6 @@ namespace NewsReader
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
 
-
-            //add du lieu
-            //var ListNews = new List<NewsItem>();
-            //var News1 = new NewsItem();
-            //News1.Title = "iPhone 6 dính lỗi màn hình xanh và tự khởi động lại";
-            //News1.Thumb = "http://c1.f5.img.vnecdn.net/2015/06/26/iphone-5s-blue-screen-of-death-3710-5183-1435290111.jpg";
-            //ListNews.Add(News1);
-
-            //var News2 = new NewsItem();
-            //News2.Title = "Sony Xperia M4 Aqua - smartphone chống nước giá mềm";
-            //News2.Thumb = "http://c1.f5.img.vnecdn.net/2015/06/27/Xperia-M4-Aqua-VnE5-2670-8630-1435370896.jpg";
-            //ListNews.Add(News2);
-
-            //var News3 = new NewsItem();
-            //News3.Title = "Bộ đôi smartphone pin khỏe từ Lenovo ";
-            //News3.Thumb = "http://m.f5.img.vnecdn.net/2015/06/29/29-6-201517-6101-1435566109.jpg";
-            //News3.Link = "http://sohoa.vnexpress.net/tin-tuc/san-pham/bo-doi-smartphone-pin-khoe-tu-lenovo-3240906.html";
-            //ListNews.Add(News3);
 
 
             //ObservableCollection giống như list
@@ -172,33 +155,70 @@ namespace NewsReader
             ControlPivot.ItemsSource = ListCattegory;
 
 
-            //Goi folder Local
+            //Gọi đến Local Folder chứa các cache file
             var _LocalFolder = ApplicationData.Current.LocalFolder;
-            
+
+            bool acceptOldData = false;
+
             //Lay du lieu tu RSS
-            int i = 1;
             foreach(var CattegoryModel in ListCattegory)
             {
                 //với mỗi category, đọc file xml rss và add các item vào listItem của category đó
                 var httpClient = new HttpClient();
 
                 // Ham co Async se doi ham thuc hien xong r ms chay xuong doi
-                i++;
-                //tao file cache với tên dc mã hóa để tránh bị trùng
-                var fileCache = await _LocalFolder.CreateFileAsync(i.ToString(), CreationCollisionOption.OpenIfExists);
+                //tao file cache; mỗi category một file
+                var fileCache = await _LocalFolder.CreateFileAsync(CattegoryModel.title, CreationCollisionOption.OpenIfExists);
                 
                 string strRSS = await Helper.readFile(fileCache);
 
                 var properties = await fileCache.GetBasicPropertiesAsync();
-                if((DateTime.Now - properties.DateModified).TotalMinutes > 5 || string.IsNullOrEmpty(strRSS))
+                if (Helper.IsConnectedToInternet())
                 {
-                     strRSS = await httpClient.GetStringAsync(CattegoryModel.links);
-                     await Helper.writeFile(fileCache, strRSS); 
+                    //có kết nối mạng
+                    //check xem file cache đã cũ chưa
+                    if ((DateTime.Now - properties.DateModified).TotalMinutes > 5 )
+                    {
+                        //đã cũ, load file mới
+                        strRSS = await httpClient.GetStringAsync(CattegoryModel.links);
+                        await Helper.writeFile(fileCache, strRSS);  //cache
+                    }
                 }
                 else
                 {
-                    strRSS =await Helper.readFile(fileCache);
+                    //không có kết nối mạng
+                    //kiem tra co file cahe
+                    if (string.IsNullOrEmpty(strRSS))
+                    {
+                        //thong bao va thoat
+                        var msg = new MessageDialog("Không có kết nối mạng, không có dữ liệu cũ, ứng dụng sẽ thoát").ShowAsync();
+                        Application.Current.Exit();
+                    }
+                    else
+                    {
+                        //thong bao load file cache cu
+                        if (!acceptOldData)
+                        {
+                            bool isAccept = false;
+                            var msg = new MessageDialog("Không thể kết nối đến máy chủ, sử dụng dữ liệu cũ ?", "Opp!");
+                            msg.Commands.Add(new UICommand("Chấp nhận", command => { isAccept = true; }));
+                            msg.Commands.Add(new UICommand("Hủy bỏ", command => { isAccept = false; }));    //hủy bỏ -> thoát
+                            msg.Options = MessageDialogOptions.AcceptUserInputAfterDelay;
+                            await msg.ShowAsync();
+                            if (!isAccept)
+                            {
+                                Application.Current.Exit();
+                            }
+                            else
+                            {
+                                acceptOldData = true;
+                            }
+                        }
+                        
+                    }
+
                 }
+                
 
 
                 //chuyen chuoi strRSS sang dinh danh file xml
