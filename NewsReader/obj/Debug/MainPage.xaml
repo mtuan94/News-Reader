@@ -23,13 +23,14 @@
             </Pivot.HeaderTemplate>
             <Pivot.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
-                        <ListBox x:ConnectionId='2' ItemsSource="{Binding NewsItems}" HorizontalAlignment="Left" Height="473" VerticalAlignment="Top" Width="331" Background="{x:Null}"                                                  BorderThickness="0" IsSynchronizedWithCurrentItem="False">
+                    <Grid Width="399" Height="665">
+                        <ListBox x:ConnectionId='2' ItemsSource="{Binding NewsItems}" HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="399" Background="{x:Null}"                                                  BorderThickness="0" IsSynchronizedWithCurrentItem="False">
                             <ListBox.Resources>
                                 <DataTemplate x:Key="DataTemplate">
-                                    <Grid Width="400" Height="80">
+                                    <Grid Width="380" Height="80">
                                         <Image HorizontalAlignment="Left" Height="80" Margin="0" Source="{Binding Thumb}" VerticalAlignment="Top" Width="80"/>
-                                        <TextBlock Height="41" Margin="85,5,10,0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" FontSize="21.333" Foreground="#FFFDFDFD" TextTrimming="WordEllipsis"/>
+                                        <TextBlock x:Name="itemTitle" Height="63" Margin="85,-7,10,0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" FontSize="21.333" Foreground="#FFFDFDFD" TextTrimming="WordEllipsis" MaxLines="4"/>
+                                        <TextBox x:Name="itemPubdate" HorizontalAlignment="Left" Height="22" Margin="85,58,0,0" TextWrapping="Wrap" Text="{Binding PubDate}" VerticalAlignment="Top" Width="285" FontSize="10.667" MinWidth="30" MinHeight="20" Background="{x:Null}" Foreground="#FFDADADA" BorderBrush="{x:Null}"/>
                                     </Grid>
                                 </DataTemplate>
                             </ListBox.Resources>

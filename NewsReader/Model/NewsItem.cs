@@ -18,6 +18,8 @@ namespace NewsReader
 
         public string Link { get; set; }
 
+        public string PubDate { get; set; }
+
         public NewsItem()
         {
 

@@ -129,5 +129,10 @@ namespace NewsReader
             NewsTitle.Text = sender.DocumentTitle;
         }
 
+        private void WebView_DOMContentLoaded(WebView sender, WebViewDOMContentLoadedEventArgs args)
+        {
+            NewsTitle.Text = sender.DocumentTitle;
+        }
+
     }
 }

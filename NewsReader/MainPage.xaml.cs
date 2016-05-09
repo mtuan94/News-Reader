@@ -29,36 +29,9 @@ namespace NewsReader
     public sealed partial class MainPage : Page
     {
         ObservableCollection<NewsItem> ListNewsItemCollection = new ObservableCollection<NewsItem>();
+        ObservableCollection<CattegoryModel> ListCattegory = new ObservableCollection<CattegoryModel>();
         public MainPage()
         {
-            this.InitializeComponent();
-
-            this.NavigationCacheMode = NavigationCacheMode.Required;
-        }
-
-        /// <summary>
-        /// Khởi chạy khi mở úng dụng
-        /// async bất đồng bộ
-        /// gặp await -> đứng lại đợi đến khi hàm thực hiện xong
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            // TODO: Prepare page for display here.
-
-            // TODO: If your application contains multiple pages, ensure that you are
-            // handling the hardware Back button by registering for the
-            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
-            // If you are using the NavigationHelper provided by some templates,
-            // this event is handled for you.
-
-
-
-            //ObservableCollection giống như list
-            //list không có sự kiện tương tác với người dùng, khi đã Binding nếu list thay đổi -> lỗi
-            //ObservableCollection hỗ trợ thay đổi list sau khi binding
-            var ListCattegory = new ObservableCollection<CattegoryModel>();
             ListCattegory.Add(new CattegoryModel()
             {
                 title = "Tin mới nhất",
@@ -149,6 +122,37 @@ namespace NewsReader
                 links = "http://vnexpress.net/rss/cong-dong.rss",
                 NewsItems = new ObservableCollection<NewsItem>()
             });
+            this.InitializeComponent();
+
+            this.NavigationCacheMode = NavigationCacheMode.Required;
+        }
+
+        /// <summary>
+        /// Khởi chạy khi mở úng dụng
+        /// async bất đồng bộ
+        /// gặp await -> đứng lại đợi đến khi hàm thực hiện xong
+        /// </summary>
+        /// <param name="e">Event data that describes how this page was reached.
+        /// This parameter is typically used to configure the page.</param>
+        
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            // TODO: Prepare page for display here.
+
+            // TODO: If your application contains multiple pages, ensure that you are
+            // handling the hardware Back button by registering for the
+            // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
+            // If you are using the NavigationHelper provided by some templates,
+            // this event is handled for you.
+
+
+
+            //ObservableCollection giống như list
+            //list không có sự kiện tương tác với người dùng, khi đã Binding nếu list thay đổi -> lỗi
+            //ObservableCollection hỗ trợ thay đổi list sau khi binding
+            
+
+            
 
 
             //set source để Binding cho ControlPovot
@@ -168,57 +172,59 @@ namespace NewsReader
 
                 // Ham co Async se doi ham thuc hien xong r ms chay xuong doi
                 //tao file cache; mỗi category một file
-                var fileCache = await _LocalFolder.CreateFileAsync(CattegoryModel.title, CreationCollisionOption.OpenIfExists);
+               // var fileCache = await _LocalFolder.CreateFileAsync(CattegoryModel.title, CreationCollisionOption.OpenIfExists);
                 
-                string strRSS = await Helper.readFile(fileCache);
+                //string strRSS = await Helper.readFile(fileCache);
 
-                var properties = await fileCache.GetBasicPropertiesAsync();
+                //var properties = await fileCache.GetBasicPropertiesAsync();
+
                 if (Helper.IsConnectedToInternet())
                 {
                     //có kết nối mạng
                     //check xem file cache đã cũ chưa
-                    if ((DateTime.Now - properties.DateModified).TotalMinutes > 5 || string.IsNullOrEmpty(strRSS))
-                    {
                         //đã cũ, load file mới
-                        strRSS = await httpClient.GetStringAsync(CattegoryModel.links);
-                        await Helper.writeFile(fileCache, strRSS);  //cache
+                    string strRSS = await httpClient.GetStringAsync(CattegoryModel.links);
+                    var DocXML = XDocument.Parse(strRSS);
+                        //await Helper.writeFile(fileCache, strRSS);  //cache
+
+                    try
+                    {
+                        //Descendants: lấy file xml, đọc các "item", gom các item vào 1 list
+                        var ListNews = from item in DocXML.Descendants("item")
+                                       //sử dụng Linq
+                                       select new NewsItem()
+                                       {
+                                           Title = item.Element("title").Value,
+                                           Description = item.Element("description").Value,
+                                           Link = item.Element("link").Value,
+                                           Thumb = GetLinkThumb(item.Element("description").Value),
+                                           PubDate = item.Element("pubDate").Value
+                                       };
+                        foreach (var newsitem in ListNews)
+                        {
+                            CattegoryModel.NewsItems.Add(newsitem);
+                        }
                     }
+                    catch (Exception a)
+                    {
+
+                    }
+            
                 }
                 else
                 {
                     //không có kết nối mạng
                     //thong bao va thoat
-                        var msg = new MessageDialog("Không có kết nối mạng, ứng dụng sẽ thoát");
-                        await msg.ShowAsync();
-                        Application.Current.Exit();
+                    var msg = new MessageDialog("Không có kết nối mạng, ứng dụng sẽ thoát");
+                    await msg.ShowAsync();
+                    Application.Current.Exit();
 
                 }
                 //chuyen chuoi strRSS sang dinh danh file xml
 
-                var DocXML = XDocument.Parse(strRSS);
+                
 
-                try
-                {
-                    //Descendants: lấy file xml, đọc các "item", gom các item vào 1 list
-                    var ListNews = from item in DocXML.Descendants("item")
-                                   //sử dụng Linq
-                                   select new NewsItem()
-                                   {
-                                       Title = item.Element("title").Value,
-                                       Description = item.Element("description").Value,
-                                       Link = item.Element("link").Value,
-                                       Thumb = GetLinkThumb(item.Element("description").Value)
-                                   };
-                    foreach (var newsitem in ListNews)
-                    {
-                        CattegoryModel.NewsItems.Add(newsitem);
-                    }
-                }
-                catch (Exception a)
-                {
-
-                }
-            
+                
             }
             //Load xong du lieu
             LoadScreen.Visibility = Visibility.Collapsed;
