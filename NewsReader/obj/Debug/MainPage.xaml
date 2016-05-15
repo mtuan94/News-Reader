@@ -5,7 +5,7 @@
     xmlns:local="using:NewsReader"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" 
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
@@ -23,15 +23,17 @@
             </Pivot.HeaderTemplate>
             <Pivot.ItemTemplate>
                 <DataTemplate>
-                    <Grid Width="399" Height="665">
-                        <ListBox x:ConnectionId='2' ItemsSource="{Binding NewsItems}" HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="399" Background="{x:Null}"                                                  BorderThickness="0" IsSynchronizedWithCurrentItem="False">
+                    <Grid Width="399">
+                        <ListBox x:ConnectionId='2' ItemsSource="{Binding NewsItems}" Background="{x:Null}"                                                  BorderThickness="0" IsSynchronizedWithCurrentItem="False" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Visible">
                             <ListBox.Resources>
                                 <DataTemplate x:Key="DataTemplate">
-                                    <Grid Width="380" Height="80">
+
+                                    <Grid Width="340" Height="80" VerticalAlignment="Top">
                                         <Image HorizontalAlignment="Left" Height="80" Margin="0" Source="{Binding Thumb}" VerticalAlignment="Top" Width="80"/>
-                                        <TextBlock x:Name="itemTitle" Height="63" Margin="85,-7,10,0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" FontSize="21.333" Foreground="#FFFDFDFD" TextTrimming="WordEllipsis" MaxLines="4"/>
-                                        <TextBox x:Name="itemPubdate" HorizontalAlignment="Left" Height="22" Margin="85,58,0,0" TextWrapping="Wrap" Text="{Binding PubDate}" VerticalAlignment="Top" Width="285" FontSize="10.667" MinWidth="30" MinHeight="20" Background="{x:Null}" Foreground="#FFDADADA" BorderBrush="{x:Null}"/>
+                                        <TextBlock x:Name="itemTitle" Height="63" Margin="93,-7,0,0" TextWrapping="Wrap" Text="{Binding Title}" VerticalAlignment="Top" FontSize="21.333" Foreground="White" TextTrimming="WordEllipsis" MaxLines="4" Width="240" HorizontalAlignment="Left"/>
+                                        <TextBox x:Name="itemPubdate" HorizontalAlignment="Left" Height="22" Margin="85,58,0,0" TextWrapping="Wrap" Text="{Binding PubDate}" VerticalAlignment="Top" Width="240" FontSize="10.667" MinWidth="30" MinHeight="20" Background="{x:Null}" Foreground="#FFDADADA" BorderBrush="{x:Null}"/>
                                     </Grid>
+
                                 </DataTemplate>
                             </ListBox.Resources>
                             <ListBox.ItemTemplate>
@@ -43,9 +45,9 @@
             </Pivot.ItemTemplate>
 
         </Pivot>
-        <Grid x:Name="LoadScreen" Height="640" Width="400" Background="Black" VerticalAlignment="Center" d:IsHidden="True">
-            <ProgressRing Height="95" Margin="152,215,151,0" Width="97" VerticalAlignment="Top" IsActive="True"/>
-            <TextBlock Height="68" Margin="139,315,131,0" TextWrapping="Wrap" Text="Loading..." Width="130" FontSize="30" VerticalAlignment="Top"/>
+        <Grid x:Name="LoadScreen" Height="640" Width="400" Background="Black" VerticalAlignment="Center">
+            <ProgressRing Height="70" Margin="152,215,151,0" Width="70" VerticalAlignment="Top" IsActive="True"/>
+            <TextBlock Height="68" Margin="139,315,131,0" TextWrapping="Wrap" Text="Loading..." Width="130" FontSize="26.667" VerticalAlignment="Top"/>
         </Grid>
 
 

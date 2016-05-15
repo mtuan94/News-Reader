@@ -18,8 +18,10 @@ namespace NewsReader
         //mặc định đã có
         //khai báo lại
         // mỗi lần new CattegoryModel sẽ khởi tạo 1 NewsItems
-        public CattegoryModel()
+        public CattegoryModel(string titleIn, string linksIn)
         {
+            title = titleIn;
+            links = linksIn;
             NewsItems = new ObservableCollection<NewsItem>();
         }
 

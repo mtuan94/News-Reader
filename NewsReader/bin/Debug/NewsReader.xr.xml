@@ -50,6 +50,7 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="TextTrimming" />
       <RootProperty Name="MaxLines" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Style" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
@@ -58,16 +59,19 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Background" />
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="IsSynchronizedWithCurrentItem" />
+      <RootProperty Name="IsDoubleTapEnabled" />
+      <RootProperty Name="IsHoldingEnabled" />
+      <RootProperty Name="IsRightTapEnabled" />
       <RootProperty Name="Resources" />
       <RootProperty Name="ItemTemplate" />
       <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.NullExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">

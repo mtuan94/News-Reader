@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -28,103 +29,44 @@ namespace NewsReader
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
         ObservableCollection<NewsItem> ListNewsItemCollection = new ObservableCollection<NewsItem>();
         ObservableCollection<CattegoryModel> ListCattegory = new ObservableCollection<CattegoryModel>();
         public MainPage()
         {
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Tin mới nhất",
-                links = "http://vnexpress.net/rss/tin-moi-nhat.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
 
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Thế giới",
-                links = "http://vnexpress.net/rss/the-gioi.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Kinh doanh",
-                links = "http://vnexpress.net/rss/kinh-doanh.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Giải trí",
-                links = "http://vnexpress.net/rss/giai-tri.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Pháp luật",
-                links = "http://vnexpress.net/rss/phap-luat.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Giáo dục",
-                links = "http://vnexpress.net/rss/giao-duc.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Sức khỏe",
-                links = "http://vnexpress.net/rss/suc-khoe.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Gia đình",
-                links = "http://vnexpress.net/rss/gia-dinh.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Du lịch",
-                links = "http://vnexpress.net/rss/du-lich.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Khoa học",
-                links = "http://vnexpress.net/rss/khoa-hoc.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Số hóa",
-                links = "http://vnexpress.net/rss/so-hoa.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Xe",
-                links = "http://vnexpress.net/rss/oto-xe-may.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
-
-            ListCattegory.Add(new CattegoryModel()
-            {
-                title = "Cộng đồng",
-                links = "http://vnexpress.net/rss/cong-dong.rss",
-                NewsItems = new ObservableCollection<NewsItem>()
-            });
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+            this.DataContext = this;
+
+            ListCattegory.Add(new CattegoryModel("Tin mới nhất", "http://vnexpress.net/rss/tin-moi-nhat.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Thế giới", "http://vnexpress.net/rss/the-gioi.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Kinh doanh","http://vnexpress.net/rss/kinh-doanh.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Giải trí","http://vnexpress.net/rss/giai-tri.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Pháp luật", "http://vnexpress.net/rss/phap-luat.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Giáo dục", "http://vnexpress.net/rss/giao-duc.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Sức khỏe", "http://vnexpress.net/rss/suc-khoe.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Gia đình", "http://vnexpress.net/rss/gia-dinh.rss"));
+  
+            ListCattegory.Add(new CattegoryModel("Du lịch", "http://vnexpress.net/rss/du-lich.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Khoa học", "http://vnexpress.net/rss/khoa-hoc.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Số hóa", "http://vnexpress.net/rss/so-hoa.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Xe", "http://vnexpress.net/rss/oto-xe-may.rss"));
+
+            ListCattegory.Add(new CattegoryModel("Cộng đồng", "http://vnexpress.net/rss/cong-dong.rss"));
+
+            
         }
 
         /// <summary>
@@ -204,11 +146,14 @@ namespace NewsReader
                         {
                             CattegoryModel.NewsItems.Add(newsitem);
                         }
+                        //Load xong du lieu
+                        LoadScreen.Visibility = Visibility.Collapsed;
                     }
                     catch (Exception a)
                     {
 
                     }
+                    
             
                 }
                 else
@@ -220,14 +165,10 @@ namespace NewsReader
                     Application.Current.Exit();
 
                 }
-                //chuyen chuoi strRSS sang dinh danh file xml
-
-                
 
                 
             }
-            //Load xong du lieu
-            LoadScreen.Visibility = Visibility.Collapsed;
+            
         }
 
         
@@ -253,6 +194,11 @@ namespace NewsReader
         //Tất cả Item trong list đều có hàm sự kiện selection change
         //sender đại diện cho đối tượng gây ra sự kiện
         //ở đây đại diện cho listbox mà người dùng nhấn vào 
+        /// <summary>
+        /// Khi mà người dùng vuốt chuyển qua lại giữa các ControlPivod
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ControlPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             try
@@ -261,7 +207,7 @@ namespace NewsReader
                 var newsItem = (sender as ListBox).SelectedItem as NewsItem;    //đại diện cho bài báo ng dùng nhấn
                 if (newsItem != null)
                 {
-                    //Truyền đối tượng sang frame khác
+                    //Truyền đối tượng sang frame reading
                     Frame.Navigate(typeof(ReadingPage), newsItem);
                 }
             }

@@ -25,21 +25,35 @@
     <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\150.png">
+      <PackagePath>Assets\150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\44.png">
+      <PackagePath>Assets\44.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\news150.png">
+      <PackagePath>Assets\news150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\news44.png">
+      <PackagePath>Assets\news44.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
@@ -47,7 +61,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\GoogleDrive\Primary\PROJECT\VisualStudio\NewsReader\NewsReader\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
